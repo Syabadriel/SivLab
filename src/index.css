@@ -1,0 +1,178 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  letter-spacing: -0.01em;
+}
+
+/* Hard outlines and flat offsets for form inputs and selectors */
+input:not([type="checkbox"]):not([type="radio"]),
+select,
+textarea {
+  border-width: 2px !important;
+  border-color: #000000 !important;
+  border-radius: 4px !important;
+  box-shadow: 2.5px 2.5px 0px 0px #000000 !important;
+  font-weight: 700 !important;
+  transition: all 0.1s ease !important;
+}
+
+.dark input:not([type="checkbox"]):not([type="radio"]),
+.dark select,
+.dark textarea {
+  border-color: #ffffff !important;
+  box-shadow: 2.5px 2.5px 0px 0px #ffffff !important;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  transform: translate(-0.5px, -0.5px);
+  box-shadow: 3.5px 3.5px 0px 0px #000000 !important;
+  outline: none !important;
+}
+
+.dark input:focus,
+.dark select:focus,
+.dark textarea:focus {
+  box-shadow: 3.5px 3.5px 0px 0px #ffffff !important;
+}
+
+/* Neo-Brutalist styled buttons targeting standard UI actions (adding items, submitting, editing, deleting) */
+button.bg-indigo-600,
+button[class*="bg-indigo-600"],
+button[class*="bg-indigo-700"],
+button[class*="bg-emerald-600"],
+button[class*="bg-emerald-700"],
+button[class*="bg-red-600"],
+button[class*="bg-red-700"],
+button[class*="bg-rose-600"],
+button[class*="bg-rose-700"],
+button[class*="bg-amber-500"],
+button[class*="bg-amber-600"] {
+  border: 2px solid #000000 !important;
+  border-radius: 4px !important;
+  box-shadow: 3.5px 3.5px 0px 0px #000000 !important;
+  font-weight: 800 !important;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  transition: all 0.1s ease !important;
+}
+
+.dark button.bg-indigo-600,
+.dark button[class*="bg-indigo-600"],
+.dark button[class*="bg-indigo-700"],
+.dark button[class*="bg-emerald-600"],
+.dark button[class*="bg-emerald-700"],
+.dark button[class*="bg-red-600"],
+.dark button[class*="bg-red-700"],
+.dark button[class*="bg-rose-600"],
+.dark button[class*="bg-rose-700"],
+.dark button[class*="bg-amber-500"],
+.dark button[class*="bg-amber-600"] {
+  border-color: #ffffff !important;
+  box-shadow: 3.5px 3.5px 0px 0px #ffffff !important;
+}
+
+button.bg-indigo-600:hover,
+button[class*="bg-indigo-600"]:hover,
+button[class*="bg-indigo-700"]:hover,
+button[class*="bg-emerald-600"]:hover,
+button[class*="bg-emerald-700"]:hover,
+button[class*="bg-red-600"]:hover,
+button[class*="bg-red-700"]:hover,
+button[class*="bg-rose-600"]:hover,
+button[class*="bg-rose-700"]:hover,
+button[class*="bg-amber-500"]:hover,
+button[class*="bg-amber-600"]:hover {
+  transform: translate(-1px, -1px);
+  box-shadow: 4.5px 4.5px 0px 0px #000000 !important;
+}
+
+.dark button.bg-indigo-600:hover,
+.dark button[class*="bg-indigo-600"]:hover,
+.dark button[class*="bg-indigo-700"]:hover,
+.dark button[class*="bg-emerald-600"]:hover,
+.dark button[class*="bg-emerald-700"]:hover,
+.dark button[class*="bg-red-600"]:hover,
+.dark button[class*="bg-red-700"]:hover,
+.dark button[class*="bg-rose-600"]:hover,
+.dark button[class*="bg-rose-700"]:hover,
+.dark button[class*="bg-amber-500"]:hover,
+.dark button[class*="bg-amber-600"]:hover {
+  box-shadow: 4.5px 4.5px 0px 0px #ffffff !important;
+}
+
+button.bg-indigo-600:active,
+button[class*="bg-indigo-600"]:active,
+button[class*="bg-indigo-700"]:active,
+button[class*="bg-emerald-600"]:active,
+button[class*="bg-emerald-700"]:active {
+  transform: translate(2px, 2px);
+  box-shadow: 0px 0px 0px 0px #000000 !important;
+}
+
+.dark button.bg-indigo-600:active,
+.dark button[class*="bg-indigo-600"]:active,
+.dark button[class*="bg-indigo-700"]:active,
+.dark button[class*="bg-emerald-600"]:active,
+.dark button[class*="bg-emerald-700"]:active {
+  box-shadow: 0px 0px 0px 0px #ffffff !important;
+}
+
+/* Clean standard layout rounded corners to sharp Brutalist box-edges */
+.rounded-xl,
+.rounded-2xl,
+.rounded-3xl,
+.rounded-lg {
+  border-radius: 4px !important;
+}
+
+/* Blocky thick badges styling mapping */
+.rounded-full:not([class*="w-1.5"]):not([class*="h-1.5"]):not([class*="w-8"]):not([class*="h-8"]) {
+  border-radius: 4px !important;
+  border: 2px solid #000000 !important;
+  font-weight: 800 !important;
+}
+
+.dark .rounded-full:not([class*="w-1.5"]):not([class*="h-1.5"]):not([class*="w-8"]):not([class*="h-8"]) {
+  border-color: #ffffff !important;
+}
+
+/* Stark highlights on active menu selections */
+button[class*="bg-indigo-50"],
+button[class*="bg-indigo-50"] * {
+  background-color: #fde047 !important;
+  /* bright neo-brutalist yellow */
+  color: #000000 !important;
+  border-color: #000000 !important;
+}
+
+button[class*="bg-indigo-50"] {
+  border: 2px solid #000000 !important;
+  box-shadow: 2px 2px 0px 0px #000000 !important;
+  font-weight: 800 !important;
+}
+
+.dark button[class*="bg-indigo-500/15"],
+.dark button[class*="bg-indigo-500/15"] * {
+  background-color: #6366f1 !important;
+  /* Indigo dark high-contrast */
+  color: #ffffff !important;
+  border-color: #ffffff !important;
+}
+
+.dark button[class*="bg-indigo-500/15"] {
+  border: 2px solid #ffffff !important;
+  box-shadow: 2px 2px 0px 0px #ffffff !important;
+  font-weight: 800 !important;
+}
